@@ -1,20 +1,4 @@
-/*
- * =====================================================================================
- *
- *       Filename:  mysql_pool.cpp
- *
- *    Description:  Á¬½Ó³Ø
- *
- *        Version:  1.0
- *        Created:  2014-4-13
- *       Revision:  none
- *       Compiler:  g++
- *
- *         Author:  liujie (), liujiejs01@dangdang.com
- *        Company:  dangdang.com
- *
- * =====================================================================================
- */
+
 #include "MysqlConnPool.h"
 
 MysqlConnPool::MysqlConnPool() throw():
