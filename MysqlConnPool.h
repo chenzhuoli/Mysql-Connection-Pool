@@ -1,21 +1,4 @@
 
-/*
- * =====================================================================================
- *
- *       Filename:  mysql_pool.h
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  2014-4-13
- *       Revision:  none
- *       Compiler:  g++
- *
- *         Author:  liujie (), liujiejs01@dangdang.com
- *        Company:  dangdang.com
- *
- * =====================================================================================
- */
 #ifndef _MYSQL_CONN_POOL_H_
 #define _MYSQL_CONN_POOL_H_
 
@@ -43,17 +26,17 @@ public:
 	MysqlConnPool() throw();
 	~MysqlConnPool();
 
-	// ÉèÖÃÊı¾İ¿âµÄµØÖ·
+	// è®¾ç½®æ•°æ®åº“çš„åœ°å€
 	void setMysqlConfig(const string& ip, const string& user, const string& passwd, const string& db_name, const int& port);
 
-	// ³õÊ¼»¯Êı¾İ¿âÁ¬½Ó³Ø
+	// åˆå§‹åŒ–æ•°æ®åº“è¿æ¥æ± 
 	//void initConnPool(u_int size) throw(MySqlException);
 	void initConnPool(u_int size) throw();
 
-	// ´ÓÁ¬½Ó³ØÖĞÈ¡³öÒ»¸öÁ¬½Ó
+	// ä»è¿æ¥æ± ä¸­å–å‡ºä¸€ä¸ªè¿æ¥
 	DBOperator* get();
 
-	// ÏòÁ¬½Ó³Ø·Å»ØÒ»¸öÁ¬½Ó
+	// å‘è¿æ¥æ± æ”¾å›ä¸€ä¸ªè¿æ¥
 	void put(DBOperator* conn);
 
 private:
